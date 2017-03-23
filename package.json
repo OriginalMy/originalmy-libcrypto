@@ -27,6 +27,7 @@
     "bip39": "^2.2.0",
     "bitcoinjs-lib": "^2.3.0",
     "bitcoinjs-message": "^1.0.1",
+    "crypto": "0.0.3",
     "describe": "^1.2.0",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
