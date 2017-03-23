@@ -1,20 +1,19 @@
-Mudamos LibCrypto
+OriginalMy LibCrypto
 
 Creates and manipulates seeds and wallets for Blockchain
 =======
 
-[NPM Link](https://www.npmjs.org/package/mudamos-lib-crypto)
+[NPM Link](https://www.npmjs.org/package/originalmy-lib-crypto)
 
-[![NPM Package](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.org/package/mudamos-lib-crypto)
+[![NPM Package](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.org/package/originalmy-lib-crypto)
 
-A module for [mudamos](https://github.com/itsriodejaneiro) that implements [wallets and seeds fro Blockchain](https://github.com/itsriodejaneiro/mudamos-libcrypto).
 
 ## Getting Started
 
 This library is distributed in the npm packaging systems.
 
 ```sh
-npm install mudamos-libcrypto
+npm install originalmy-libcrypto
 ```
 
 There are many examples of how to use it on the developer guide below.
@@ -22,13 +21,13 @@ There are many examples of how to use it on the developer guide below.
 ### Importing npm module
 
 ```javascript
-var MudamosLibCrypto = require('mudamos-libcrypto');
+var OriginalmyLibCrypto = require('originalmy-libcrypto');
 ```
 
 
 ### To CreateSeed:
 ```javascript
-MudamosLibCrypto.createSeed('BRAZILIAN-PORTUGUESE', 'ExtraEntropy');
+OriginalmyLibCrypto.createSeed('BRAZILIAN-PORTUGUESE', 'ExtraEntropy');
 ```
 ```
 Parameters
@@ -41,7 +40,7 @@ Obs.: Extraentroy is used to generate extra random seed
 
 ### To CreateSeedAndWallet:
 ```javascript
-MudamosLibCrypto.createSeedAndWallet('BRAZILIAN-PORTUGUESE', 'ExtraEntropy');
+OriginalmyLibCrypto.createSeedAndWallet('BRAZILIAN-PORTUGUESE', 'ExtraEntropy');
 ```
 ```
 Parameters
@@ -59,7 +58,7 @@ Obs.: Extraentroy is used to generate extra random seed
 
 ### To ValidateSeed:
 ```javascript
-let result = MudamosLibCrypto.validateSeed('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
+let result = OriginalmyLibCrypto.validateSeed('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
 ```
 ```
 Parameters
@@ -71,7 +70,7 @@ Return
 
 ### To ValidateSeedWithLang:
 ```javascript
-let result = MudamosLibCrypto.validateSeedWithLang('BRAZILIAN-PORTUGUESE','veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
+let result = OriginalmyLibCrypto.validateSeedWithLang('BRAZILIAN-PORTUGUESE','veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
 ```
 ```
 Parameters
@@ -83,7 +82,7 @@ Return
 
 ### To CreateWallet:
 ```javascript
-let wallet =  MudamosLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
+let wallet =  OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
 ```
 ```
 Parameters
@@ -97,7 +96,7 @@ Return
 ```javascript
 let seed = 'lagosta diario mesmo dificil plastico grade escondido mergulho acolher remeter areia herdar';
 let publicKey = '1JLFmGH679akX7uyUTcGzRoCVNjdYUagaA';
-let result =  MudamosLibCrypto.validateWallet(seed,publicKey);
+let result =  OriginalmyLibCrypto.validateWallet(seed,publicKey);
 ```
 ```
 Parameters
@@ -112,7 +111,7 @@ Return
 let seed = 'lagosta diario mesmo dificil plastico grade escondido mergulho acolher remeter areia herdar';
 let message = 'Message'
 let difficulty = 5
-let result =  MudamosLibCrypto.signMessage(seed,message,difficulty);
+let result =  OriginalmyLibCrypto.signMessage(seed,message,difficulty);
 ```
 ```
 Parameters
@@ -127,7 +126,7 @@ Return
 let publicKey = '1JLFmGH679akX7uyUTcGzRoCVNjdYUagaA'
 let message = 'Message';
 let signature = 'IDPyblrXKujgcw4fQXBLgEThNs18LWOkrVYwA8WOQrJUSGrT+mIuiL17aWm72GcMO4SsK24j/vZXl5mAj5tPQIc=';
-let result =  MudamosLibCrypto.verifyMessage(publicKey, message, signature);
+let result =  OriginalmyLibCrypto.verifyMessage(publicKey, message, signature);
 ```
 ```
 Parameters
@@ -140,4 +139,4 @@ Return
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://CONTRIBUTING.md) on the main mudamos-libcrypto repo for information about how to contribute.
+See [CONTRIBUTING.md](https://CONTRIBUTING.md) on the main originalmy-libcrypto repo for information about how to contribute.
