@@ -2,7 +2,7 @@
   "name": "originalmy-libcrypto",
   "description": "Library for encryption and creation of Wallets in Blockchain",
   "readmeFilename": "README.md",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha"
   },
