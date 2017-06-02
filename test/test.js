@@ -246,6 +246,12 @@ describe('LibCrypto', function () {
             assert.equal(wallet.message,'ok');
             assert.equal(wallet.publicKey,'1NtGiFUb7Wr11pWputYr8fqJoctWi1NUUy');
         })
+        it('CreateWallet with Seed SHA', function(){
+            let wallet = LibCrypto.createWalletFromSHA('41e3e3bbed5324403b03e9570c01466e317ac886835c5ee4f4725b0307028afd');
+            assert.equal(wallet.success,true);
+            assert.equal(wallet.message,'ok');
+            assert.equal(wallet.publicKey, '18XXiTY4VPgT1nd6VHfEYU36JNHX1shQqR');
+        })
         it('CreateWallet Without Seed', function(){
             try{
                 let wallet =  LibCrypto.createWallet();
