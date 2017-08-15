@@ -250,7 +250,7 @@ describe('LibCrypto', function () {
             let wallet = LibCrypto.createWalletFromSHA('41e3e3bbed5324403b03e9570c01466e317ac886835c5ee4f4725b0307028afd');
             assert.equal(wallet.success,true);
             assert.equal(wallet.message,'ok');
-            assert.equal(wallet.publicKey, '18XXiTY4VPgT1nd6VHfEYU36JNHX1shQqR');
+            assert.equal(wallet.publicKey, '1KcQyX1kbAcLzsz62me9JzY3hPf4DaEMJ3');
         })
         it('CreateWallet Without Seed', function(){
             try{
