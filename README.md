@@ -2,7 +2,9 @@
 
 ## Creates and manipulates seeds and wallets for Blockchain
 
-[![npm version](https://badge.fury.io/js/originalmy-libcrypto.svg)](https://badge.fury.io/js/originalmy-libcrypto)
+[![npm](https://img.shields.io/npm/v/originalmy-libcrypto.svg)](https://www.npmjs.com/package/originalmy-libcrypto)
+[![npm](https://img.shields.io/npm/dt/originalmy-libcrypto.svg)](https://www.npmjs.com/package/originalmy-libcrypto)
+[![npm](https://img.shields.io/npm/l/originalmy-libcrypto.svg)](https://www.npmjs.com/package/originalmy-libcrypto)
 
 ## Getting Started
 
