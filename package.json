@@ -6,6 +6,21 @@
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OriginalMy/originalmy-libcrypto.git"
+  },
+  "keywords": [
+    "OriginalMy",
+    "blockchain",
+    "wallet",
+    "encryption"
+  ],
+  "author": "OriginalMy <contato@originalmy.com> (https://originalmy.com)",
+  "bugs": {
+    "url": "https://github.com/OriginalMy/originalmy-libcrypto/issues"
+  },
+  "homepage": "https://github.com/OriginalMy/originalmy-libcrypto#readme",
   "license": "MIT",
   "devDependencies": {
     "assert": "^1.4.1",
