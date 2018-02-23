@@ -50,7 +50,7 @@ Return
       message: string,
       success: boolean,
       publicKey: string,
-      seed: string 
+      seed: string
     }
 Obs.: Extraentroy is used to generate extra random seed
 ```
