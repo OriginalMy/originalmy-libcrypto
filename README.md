@@ -1,12 +1,10 @@
-OriginalMy LibCrypto
+# OriginalMy LibCrypto
 
-Creates and manipulates seeds and wallets for Blockchain
-=======
+## Creates and manipulates seeds and wallets for Blockchain
 
-[NPM Link](https://www.npmjs.org/package/originalmy-lib-crypto)
-
-[![NPM Package](https://img.shields.io/npm/v/@cycle/core.svg)](https://www.npmjs.org/package/originalmy-lib-crypto)
-
+[![npm](https://img.shields.io/npm/v/originalmy-libcrypto.svg)](https://www.npmjs.com/package/originalmy-libcrypto)
+[![npm](https://img.shields.io/npm/dt/originalmy-libcrypto.svg)](https://www.npmjs.com/package/originalmy-libcrypto)
+[![npm](https://img.shields.io/npm/l/originalmy-libcrypto.svg)](https://www.npmjs.com/package/originalmy-libcrypto)
 
 ## Getting Started
 
@@ -21,15 +19,16 @@ There are many examples of how to use it on the developer guide below.
 ### Importing npm module
 
 ```javascript
-var OriginalmyLibCrypto = require('originalmy-libcrypto');
+const OriginalmyLibCrypto = require('originalmy-libcrypto');
 ```
 
+### Create Seed
 
-### To CreateSeed:
 ```javascript
-OriginalmyLibCrypto.createSeed('BRAZILIAN-PORTUGUESE', 'ExtraEntropy');
+let seed = OriginalmyLibCrypto.createSeed('BRAZILIAN-PORTUGUESE', 'ExtraEntropy');
 ```
-```
+
+```text
 Parameters
     Language:  ENGLISH, BRAZILIAN-PORTUGUESE
     ExtraEntropy: Any string
@@ -38,11 +37,13 @@ Return
 Obs.: Extraentroy is used to generate extra random seed
 ```
 
-### To CreateSeedAndWallet:
+### Create seed and wallet
+
 ```javascript
-OriginalmyLibCrypto.createSeedAndWallet('BRAZILIAN-PORTUGUESE', 'ExtraEntropy');
+let seedAndWallet = OriginalmyLibCrypto.createSeedAndWallet('BRAZILIAN-PORTUGUESE', 'ExtraEntropy');
 ```
-```
+
+```text
 Parameters
     Language:  ENGLISH, BRAZILIAN-PORTUGUESE
     ExtraEntropy: Any string
@@ -51,28 +52,31 @@ Return
       message: string,
       success: boolean,
       publicKey: string,
-      seed: string 
+      seed: string
     }
 Obs.: Extraentroy is used to generate extra random seed
 ```
 
-### To ValidateSeed:
+### Validate seed
+
 ```javascript
 let result = OriginalmyLibCrypto.validateSeed('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
 ```
-```
+
+```text
 Parameters
     Seed:  String of 12 words
 Return
     Boolean
 ```
 
+### Validate seed with language
 
-### To ValidateSeedWithLang:
 ```javascript
 let result = OriginalmyLibCrypto.validateSeedWithLang('BRAZILIAN-PORTUGUESE','veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
 ```
-```
+
+```text
 Parameters
     Language:  ENGLISH,BRAZILIAN-PORTUGUESE
     Seed:  String of 12 words
@@ -80,25 +84,28 @@ Return
     Boolean
 ```
 
-### To CreateWallet:
+### Create wallet
+
 ```javascript
 let wallet =  OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
 ```
-```
+
+```text
 Parameters
     Seed:  String of 12 words
 Return
     PublicKey as Wallet address
 ```
 
+### Validate wallet
 
-### To ValidateWallet:
 ```javascript
 let seed = 'lagosta diario mesmo dificil plastico grade escondido mergulho acolher remeter areia herdar';
 let publicKey = '1JLFmGH679akX7uyUTcGzRoCVNjdYUagaA';
 let result =  OriginalmyLibCrypto.validateWallet(seed,publicKey);
 ```
-```
+
+```text
 Parameters
     Seed:  String of 12 words
     PublicKey = Wallet address
@@ -106,14 +113,16 @@ Return
     Boolean
 ```
 
-### To SignMessage:
+### Sign message
+
 ```javascript
 let seed = 'lagosta diario mesmo dificil plastico grade escondido mergulho acolher remeter areia herdar';
 let message = 'Message'
 let difficulty = 5
 let result =  OriginalmyLibCrypto.signMessage(seed,message,difficulty);
 ```
-```
+
+```text
 Parameters
     Seed:  String of 12 words
     Message = Any words
@@ -121,14 +130,16 @@ Return
     block = String as [message];[wallet];[signature];nonce
 ```
 
-### To VerifyMessage:
+### Verify message
+
 ```javascript
 let publicKey = '1JLFmGH679akX7uyUTcGzRoCVNjdYUagaA'
 let message = 'Message';
 let signature = 'IDPyblrXKujgcw4fQXBLgEThNs18LWOkrVYwA8WOQrJUSGrT+mIuiL17aWm72GcMO4SsK24j/vZXl5mAj5tPQIc=';
 let result =  OriginalmyLibCrypto.verifyMessage(publicKey, message, signature);
 ```
-```
+
+```text
 Parameters
     PublicKey = Wallet address
     Message = Any words
@@ -139,4 +150,4 @@ Return
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://CONTRIBUTING.md) on the main originalmy-libcrypto repo for information about how to contribute.
+Feel free to make a fork and open an pull request or open an [issue](https://github.com/OriginalMy/originalmy-libcrypto/issues/new) for us.
