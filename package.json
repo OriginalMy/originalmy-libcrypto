@@ -43,6 +43,7 @@
     "bitcoinjs-message": "^1.0.1",
     "crypto": "0.0.3",
     "describe": "^1.2.0",
+    "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-livereload": "^3.8.1",

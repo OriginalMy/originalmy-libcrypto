@@ -33,7 +33,7 @@ gulp.task('watch', function() {
 
 var testmocha = function() {
 return gulp.src(tests).pipe(new mocha({
-    reporter: 'nyan'
+    // reporter: 'nyan'
 }));
 };
 
