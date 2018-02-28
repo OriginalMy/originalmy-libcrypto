@@ -17,7 +17,7 @@ gulp.task('default', function () {
         .pipe(babel({presets: ['es2015']}))
         .pipe(concat('lib-crypto.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('dist'));        
+        .pipe(gulp.dest('dist'));
 });
 
 
@@ -33,7 +33,7 @@ gulp.task('watch', function() {
 
 var testmocha = function() {
 return gulp.src(tests).pipe(new mocha({
-    // reporter: 'nyan'
+    reporter: 'nyan'
 }));
 };
 
