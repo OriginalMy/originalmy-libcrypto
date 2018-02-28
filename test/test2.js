@@ -45,7 +45,7 @@ describe(`LibCrypto [${NETWORK}]`, function () {
       const seed = sha256('secagem sozinho qualquer cesta cruz luva escape socorrido isoladamente pessoal carga maleta');
       const message = `Nome do usuario;Endereco do usuario;Titulo de Eleitor;${new Date().toISOString()}`;
       let signature = LibCrypto.signMessage(seed, message, 2, NETWORK);
-      let result = LibCrypto.verifyMessage(publicKey, message, signature);
+      let result = LibCrypto.verifyMessage(publicKey, message, signature.split(';')[5], NETWORK);
       assert.equal(result, true);
     })
   });
