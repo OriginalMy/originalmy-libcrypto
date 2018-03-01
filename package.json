@@ -2,7 +2,7 @@
   "name": "originalmy-libcrypto",
   "description": "Library for encryption and creation of Wallets in Blockchain",
   "readmeFilename": "README.md",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha"
   },
@@ -39,10 +39,11 @@
     "bigi": "^1.4.2",
     "bip32-utils": "^0.9.1",
     "bip39": "2.2.0",
-    "bitcoinjs-lib": "^2.3.0",
+    "bitcoinjs-lib": "^3.3.2",
     "bitcoinjs-message": "^1.0.1",
     "crypto": "0.0.3",
     "describe": "^1.2.0",
+    "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-livereload": "^3.8.1",

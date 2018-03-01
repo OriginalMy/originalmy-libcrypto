@@ -40,13 +40,16 @@ Obs.: Extraentroy is used to generate extra random seed
 ### Create seed and wallet
 
 ```javascript
-let seedAndWallet = OriginalmyLibCrypto.createSeedAndWallet('BRAZILIAN-PORTUGUESE', 'ExtraEntropy');
+let seedAndWallet = OriginalmyLibCrypto.createSeedAndWallet('BRAZILIAN-PORTUGUESE', 'ExtraEntropy'); // MAINNET
+// OR: let seedAndWallet = OriginalmyLibCrypto.createSeedAndWallet('BRAZILIAN-PORTUGUESE', 'ExtraEntropy', 'mainnet'); // MAINNET
+// OR: let seedAndWallet = OriginalmyLibCrypto.createSeedAndWallet('BRAZILIAN-PORTUGUESE', 'ExtraEntropy', 'testnet'); // TESTNET
 ```
 
 ```text
 Parameters
     Language:  ENGLISH, BRAZILIAN-PORTUGUESE
     ExtraEntropy: Any string
+    Network: mainnet or testnet
 Return
     Wallet {
       message: string,
@@ -84,15 +87,34 @@ Return
     Boolean
 ```
 
-### Create wallet
+### Create wallet from seed
 
 ```javascript
-let wallet =  OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
+let wallet = OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra'); // MAINNET
+// OR: let wallet = OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra', 'mainnet'); // MAINNET
+// OR: let wallet = OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra', 'testnet'); // TESTNET
 ```
 
 ```text
 Parameters
     Seed:  String of 12 words
+    Network: mainnet or testnet
+Return
+    PublicKey as Wallet address
+```
+
+### Create wallet from SHA256 of a seed
+
+```javascript
+let wallet =  OriginalmyLibCrypto.createWalletFromSHA('44cfbe4215c8ef38a2e02c2b1870d4d57902f78a581e5e3974b548ba90a7661b'); // MAINNET
+// OR: let wallet =  OriginalmyLibCrypto.createWalletFromSHA('44cfbe4215c8ef38a2e02c2b1870d4d57902f78a581e5e3974b548ba90a7661b', 'mainnet'); // MAINNET
+// OR: let wallet =  OriginalmyLibCrypto.createWalletFromSHA('44cfbe4215c8ef38a2e02c2b1870d4d57902f78a581e5e3974b548ba90a7661b', 'testnet'); // TESTNET
+```
+
+```text
+Parameters
+    Seed:  String of 12 words
+    Network: mainnet or testnet
 Return
     PublicKey as Wallet address
 ```
@@ -102,13 +124,16 @@ Return
 ```javascript
 let seed = 'lagosta diario mesmo dificil plastico grade escondido mergulho acolher remeter areia herdar';
 let publicKey = '1JLFmGH679akX7uyUTcGzRoCVNjdYUagaA';
-let result =  OriginalmyLibCrypto.validateWallet(seed,publicKey);
+let result =  OriginalmyLibCrypto.validateWallet(seed, publicKey);  // MAINNET
+// OR: let result =  OriginalmyLibCrypto.validateWallet(seed, publicKey, 'mainnet'); // MAINNET
+// OR: let result =  OriginalmyLibCrypto.validateWallet(seed, publicKey, 'testnet'); // TESTNET
 ```
 
 ```text
 Parameters
     Seed:  String of 12 words
     PublicKey = Wallet address
+    Network: mainnet or testnet
 Return
     Boolean
 ```
@@ -119,13 +144,16 @@ Return
 let seed = 'lagosta diario mesmo dificil plastico grade escondido mergulho acolher remeter areia herdar';
 let message = 'Message'
 let difficulty = 5
-let result =  OriginalmyLibCrypto.signMessage(seed,message,difficulty);
+let result =  OriginalmyLibCrypto.signMessage(seed,message,difficulty); // MAINNET
+// OR: let result =  OriginalmyLibCrypto.signMessage(seed,message,difficulty, 'mainnet'); // MAINNET
+// OR: let result =  OriginalmyLibCrypto.signMessage(seed,message,difficulty, 'testnet'); // TESTNET
 ```
 
 ```text
 Parameters
     Seed:  String of 12 words
     Message = Any words
+    Network: mainnet or testnet
 Return
     block = String as [message];[wallet];[signature];nonce
 ```
@@ -136,7 +164,9 @@ Return
 let publicKey = '1JLFmGH679akX7uyUTcGzRoCVNjdYUagaA'
 let message = 'Message';
 let signature = 'IDPyblrXKujgcw4fQXBLgEThNs18LWOkrVYwA8WOQrJUSGrT+mIuiL17aWm72GcMO4SsK24j/vZXl5mAj5tPQIc=';
-let result =  OriginalmyLibCrypto.verifyMessage(publicKey, message, signature);
+let result =  OriginalmyLibCrypto.verifyMessage(publicKey, message, signature); // MAINNET
+// OR: let result =  OriginalmyLibCrypto.verifyMessage(publicKey, message, signature, 'mainnet'); // MAINNET
+// OR: let result =  OriginalmyLibCrypto.verifyMessage(publicKey, message, signature, 'testnet'); // TESTNET
 ```
 
 ```text
@@ -144,6 +174,7 @@ Parameters
     PublicKey = Wallet address
     Message = Any words
     Signature:  Encrypted text message
+    Network: mainnet or testnet
 Return
     Boolean
 ```
