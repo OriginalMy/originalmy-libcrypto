@@ -1,9 +1,10 @@
-var assert = require('assert');
-var LibCrypto = require('./../lib/lib-crypto');
-var createHash = require('sha.js');
-var bitcoin = require('bitcoinjs-lib');
+const assert = require('assert');
+const LibCrypto = require('./../lib/lib-crypto');
+const createHash = require('sha.js');
+const bitcoin = require('bitcoinjs-lib');
+const NETWORK = 'mainnet';
 
-describe('LibCrypto', function () {
+describe(`LibCrypto [${NETWORK}]`, function () {
     this.timeout(60000);
     describe('CreateSeedAndWallet', function () {
         it('CreateSeedAndWallet With Language and ExtraEntropy', function(){
@@ -73,7 +74,6 @@ describe('LibCrypto', function () {
         })
         it('CreateSeed With ExtraEntropy Undefined', function(){
             let seedCreate = LibCrypto.createSeed('BRAZILIAN-PORTUGUESE', undefined);
-            console.log(seedCreate);
             assert.notEqual(seedCreate,null);
         })
         it('CreateSeed With Language Undefined', function(){
