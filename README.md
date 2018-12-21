@@ -95,6 +95,14 @@ let wallet = OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro camb
 // OR: let wallet = OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra', 'testnet'); // TESTNET
 ```
 
+```text
+Parameters
+    Seed:  String of 12 words
+    Network: mainnet or testnet
+Return
+    PublicKey as Wallet address
+```
+
 ### Create Ethereum wallet from seed
 
 ```javascript
@@ -104,7 +112,6 @@ let wallet = OriginalmyLibCrypto.createWalletETH('veterano pelicula verdadeiro c
 ```text
 Parameters
     Seed:  String of 12 words
-    Network: mainnet or testnet
 Return
     PublicKey as Wallet address
 ```
