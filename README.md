@@ -132,7 +132,7 @@ Return
     PublicKey as Wallet address
 ```
 
-### Validate wallet
+### Validate Bitcoin wallet
 
 ```javascript
 let seed = 'lagosta diario mesmo dificil plastico grade escondido mergulho acolher remeter areia herdar';
@@ -147,6 +147,22 @@ Parameters
     Seed:  String of 12 words
     PublicKey = Wallet address
     Network: mainnet or testnet
+Return
+    Boolean
+```
+
+### Validate Ethereum wallet
+
+```javascript
+let seed = 'vela dedo figura gasto refrigerante executado teto carta busca habilitado acordo forte';
+let publicKey = '0xc64c49b741e1ddbec891a5f9bef67ccdc30af12a';
+let result =  OriginalmyLibCrypto.validateWalletETH(seed, publicKey);  // MAINNET
+```
+
+```text
+Parameters
+    Seed:  String of 12 words
+    PublicKey = Wallet address
 Return
     Boolean
 ```
