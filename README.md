@@ -87,12 +87,18 @@ Return
     Boolean
 ```
 
-### Create wallet from seed
+### Create Bitcoin wallet from seed
 
 ```javascript
 let wallet = OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra'); // MAINNET
 // OR: let wallet = OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra', 'mainnet'); // MAINNET
 // OR: let wallet = OriginalmyLibCrypto.createWallet('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra', 'testnet'); // TESTNET
+```
+
+### Create Ethereum wallet from seed
+
+```javascript
+let wallet = OriginalmyLibCrypto.createWalletETH('veterano pelicula verdadeiro cambalhota curso poeta coisa balanco patife companhia governo regra');
 ```
 
 ```text
