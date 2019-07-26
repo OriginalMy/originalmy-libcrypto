@@ -141,9 +141,10 @@ Return
 ### Sign message
 
 ```javascript
-let seed = 'lagosta diario mesmo dificil plastico grade escondido mergulho acolher remeter areia herdar';
-let message = 'Message'
-let difficulty = 5
+const sha256 = require('sha256');  
+let seed = sha256('lagosta diario mesmo dificil plastico grade escondido mergulho acolher remeter areia herdar'); // Seed in sha256  
+let message = 'Message'  
+let difficulty = 5  
 let result =  OriginalmyLibCrypto.signMessage(seed,message,difficulty); // MAINNET
 // OR: let result =  OriginalmyLibCrypto.signMessage(seed,message,difficulty, 'mainnet'); // MAINNET
 // OR: let result =  OriginalmyLibCrypto.signMessage(seed,message,difficulty, 'testnet'); // TESTNET
