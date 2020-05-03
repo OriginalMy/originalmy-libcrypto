@@ -1,8 +1,8 @@
 {
   "name": "originalmy-libcrypto",
-  "description": "Library for encryption and creation of Wallets in Blockchain",
+  "description": "Base =library for managing Blockchain ID: seed, signing, validation",
   "readmeFilename": "README.md",
-  "version": "0.7.9",
+  "version": "0.8.0",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha"
   },
@@ -14,7 +14,8 @@
     "OriginalMy",
     "blockchain",
     "wallet",
-    "encryption"
+    "encryption",
+    "blockchain id"
   ],
   "author": "OriginalMy <contato@originalmy.com> (https://originalmy.com)",
   "bugs": {
@@ -41,7 +42,6 @@
     "bip39": "2.2.0",
     "bitcoinjs-lib": "^3.3.2",
     "bitcoinjs-message": "^1.0.1",
-    "crypto": "0.0.3",
     "describe": "^1.2.0",
     "sha256": "^0.2.0"
   },
